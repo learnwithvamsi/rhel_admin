@@ -69,7 +69,7 @@ network ==> dhcp for client machine?
 # network management tools for basic trouble shooting:
 ```
 network statistics == netstat -a
-ping Packet Internet or Inter-Network Grope to test destination ip address == 
+ping: The ping command sends an ICMP echo request to a specific IP address or hostname to check if the remote host is reachable. For example, you can use "ping 8.8.8.8" to check if your connection to Google's DNS server is working. 
 ping <google.com>
 ipconfig == interface configuration == 
 ipconfig /release
@@ -84,17 +84,21 @@ flush dns cache
 the /etc/resolv.conf file defines how the system uses DNS to resolve host names and IP addresses. This file usually contains a line specifying the search domains and up to three lines that specify the IP addresses of DNS server.
 dns: /etc/resolve.conf
 ip address set at /etc/sysconfig/network-scripts
+tcpdump: The tcpdump command is used to capture network traffic. It can be used to troubleshoot network issues by capturing and analyzing packets. For example, you can use "tcpdump -i eth0" to capture traffic on the eth0 interface.
 kdump:feature that allows the Linux kernel that creates crash dumps in the 
 event of a kernel crash.
 yum install nmap 
 nmap = network mapper
-dig= dig command (domain information groper) provides DNS information and 
-helps in diagnosing issues. The utility's raw output makes it the preferred 
-method for troubleshooting DNS issues.
+Netstat:The netstat command shows network statistics for the system, including active network connections and their states. You can use "netstat -a" to display all active network connections, or "netstat -rn" to display the routing table.
+dig= dig command (domain information groper) provides DNS information and helps in diagnosing issues. The utility's raw output makes it the preferred method for troubleshooting DNS issues.
+The dig command is used to perform DNS lookups. It can be used to check the DNS resolution of a domain name or IP address. For example, you can use "dig google.com" to check the DNS resolution of Google's website
 Dig <domain name /ip>
 Host <domain name/ip>
 Traceroute /tracert <domain /ip>
+The traceroute command is used to trace the path taken by IP packets from your local machine to a remote host. It shows each hop along the way and the time it takes for the packets to reach each hop. For example, you can use "traceroute google.com" to see the path taken by packets to reach Google's website.
 curl -v <https url> == gives connection details in terms of headers.
+ss: The ss command is used to display socket statistics. It can be used to show all current TCP connections, both incoming and outgoing. For example, you can use "ss -t" to display all TCP connections.
+journalctl
 ```
 # Types of users in linux:
 ```
@@ -262,7 +266,7 @@ remove symlink == > unlink <demo> or rm <demo>
 to overwrite symlink ==> ln -sf file1 demo
 ```  
 [absolute path vs relative path]
-
+htop/top
 #  users and permissions
 For aws linux ec2-user is the default user.
 “w” command shows which users are currently in login.
